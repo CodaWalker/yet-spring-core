@@ -1,6 +1,10 @@
 package com.yet.spring;
 
 public class Client {
+
+    public Client() {
+    }
+
     private String id;
     private String fullName;
 

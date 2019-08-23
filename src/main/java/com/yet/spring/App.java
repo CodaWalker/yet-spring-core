@@ -1,5 +1,8 @@
 package com.yet.spring;
 
+import com.yet.spring.beans.Client;
+import com.yet.spring.beans.Event;
+import com.yet.spring.loggers.EventLogger;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -28,9 +31,10 @@ public class App {
         App app = (App) applicationContext.getBean("app");
         Event event = applicationContext.getBean(Event.class);
         app.logEvent(event, "Some event for 1");
-
         event = applicationContext.getBean(Event.class);
         app.logEvent(event, "Some event for 2");
+        }
+
     }
 
-}
+

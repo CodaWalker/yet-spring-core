@@ -1,4 +1,4 @@
-package com.yet.spring;
+package com.yet.spring.beans;
 import java.text.DateFormat;
 import java.util.Date;
 import java.util.Random;
@@ -12,14 +12,15 @@ public class Event {
     public Event() {
     }
 
-    public Event(Date date, DateFormat dateFormat) {
+    public Event(int id, Date date, DateFormat dateFormat) {
+        this.id = id;
         this.date = date;
         this.dateFormat = dateFormat;
     }
 
-    public void setId() {
+    public int setId() {
         Random random = new Random();
-        this.id = random.nextInt();
+       return random.nextInt();
     }
 
     public int getId() {

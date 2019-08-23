@@ -9,8 +9,5 @@
         <module name="yet-spring-core" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="yet-spring-core" target="1.5" />
-    </bytecodeTargetLevel>
   </component>
 </project>

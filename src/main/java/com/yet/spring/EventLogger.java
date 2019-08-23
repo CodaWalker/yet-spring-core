@@ -1,5 +1,6 @@
 package com.yet.spring;
 
 public interface EventLogger {
-    public void logEvents(Event event);
+    public void logEvent(Event event);
+    //public String getName();
 }

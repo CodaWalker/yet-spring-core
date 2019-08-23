@@ -10,7 +10,10 @@
         <constructor-arg value="John Smith"/>
     </bean>
 
-    <bean id="event" class="com.yet.spring.Event" />
+    <bean id="event" class="com.yet.spring.Event" scope="prototype">
+            <constructor-arg value="#{new java.util.Date()}"/>
+            <constructor-arg value="#{T(java.text.DateFormat).getDateInstance()}"/>
+    </bean>
 
     <bean id="eventLogger" class="com.yet.spring.ConsoleEventLogger" />
 

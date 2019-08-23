@@ -1,10 +1,10 @@
 package com.yet.spring;
 
 public class ConsoleEventLogger implements EventLogger{
-    public ConsoleEventLogger() {
+
+
+    public void logEvent(Event event){
+        System.out.println(event.toString());
     }
 
-    public void logEvents(Event event){
-        System.out.println(event);
-    }
 }

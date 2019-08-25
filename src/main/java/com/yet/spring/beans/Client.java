@@ -1,5 +1,7 @@
 package com.yet.spring.beans;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 public class Client {
 
     public Client() {
@@ -7,6 +9,11 @@ public class Client {
 
     private String id;
     private String fullName;
+    private String greeting;
+
+    public void setGreeting(String gr) {
+        this.greeting = gr;
+    }
 
     public Client(String id, String fullName) {
         this.id = id;

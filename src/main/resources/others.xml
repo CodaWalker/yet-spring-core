@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+ 		http://www.springframework.org/schema/beans
+ 		http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="client" class="com.yet.spring.beans.Client">
+        <constructor-arg value="1"/>
+        <constructor-arg value="John Smith"/>
+        <property name="greeting" value="Hello there!" />
+    </bean>
+
+    <bean id="event" class="com.yet.spring.beans.Event" scope="prototype">
+        <constructor-arg value="#{new java.util.Random().nextInt()}"/>
+        <constructor-arg ref="date"/>
+        <constructor-arg ref="dateFormat"/>
+    </bean>
+
+    <bean id="dateFormat" class="java.text.DateFormat" factory-method="getDateTimeInstance"/>
+    <bean id="date" class="java.util.Date"/>
+
+</beans>
